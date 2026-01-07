@@ -23,20 +23,27 @@
     }
 
     .invoice-table-row {
-        border-bottom: 2px solid #000 !important;
+        border-bottom: 1px solid #000 !important;
+        /* Thinner lines */
     }
 
     .invoice-col {
-        border-right: 2px solid #000 !important;
+        border-right: 1px solid #000 !important;
+        /* Thinner lines */
+        padding: 2px 4px;
+        font-size: 0.85rem;
     }
 
     .invoice-company-info p {
         color: #555 !important;
+        font-size: 0.75rem !important;
+        margin-bottom: 0;
     }
 
 
     @page {
-        margin: 1.5cm;
+        margin: 0.75cm;
+        /* Slightly tighter to fit single page */
         size: auto;
     }
 
@@ -52,6 +59,80 @@
         margin: 0;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        font-size: 0.75rem;
+        /* Further reduced font */
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 98vh;
+        /* Fill the page */
+    }
+
+    /* Logo scaling for print */
+    .invoice-header-logo {
+        margin-bottom: 0.25rem !important;
+        /* Reduced gap as requested */
+        line-height: 1;
+        /* Reset line height */
+    }
+
+    .invoice-logo-img {
+        height: 70px;
+        /* Slightly larger logo */
+    }
+
+    .invoice-title {
+        font-size: 1.2rem;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        line-height: 1;
+    }
+
+    .invoice-meta-grid {
+        margin-bottom: 1rem !important;
+        /* Added gap before table */
+        margin-top: 0.25rem !important;
+        align-items: flex-end;
+    }
+
+    /* Compact headers */
+    .invoice-billed-to h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        line-height: 1.1;
+    }
+
+    .invoice-meta-grid>div>p {
+        margin-bottom: 3px !important;
+        line-height: 1.4 !important;
+        display: block !important;
+    }
+
+    /* Compact Table */
+    .invoice-table-header {
+        font-size: 0.8rem;
+        padding: 2px 0 !important;
+    }
+
+    /* Compact Total Box */
+    .invoice-total-box {
+        padding: 2px 12px;
+        font-size: 0.9rem;
+        gap: 0.5rem;
+    }
+
+    .invoice-footer {
+        margin-top: auto !important;
+        /* Push to bottom of page */
+        page-break-inside: avoid;
+        /* Prevent footer splitting */
+    }
+
+    .invoice-company-info h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        line-height: 1.1;
     }
 }
 
@@ -59,6 +140,14 @@
     text-align: center;
     margin-bottom: 2rem;
     width: 100%;
+}
+
+.invoice-logo-img {
+    height: 180px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    objectFit: contain;
 }
 
 .invoice-logo-text {

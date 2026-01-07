@@ -29,7 +29,7 @@ const InvoicePreview = ({ data }) => {
         <div className="invoice-preview">
             {/* Header / Logo */}
             <div className="invoice-header-logo">
-                <img src={Logo} alt="H & J Cakes" style={{ height: '180px', width: 'auto', display: 'block', margin: '0 auto', objectFit: 'contain' }} />
+                <img src={Logo} alt="H & J Cakes" className="invoice-logo-img" />
             </div>
 
             <div className="invoice-meta-grid">
