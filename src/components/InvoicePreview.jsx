@@ -39,10 +39,19 @@ const InvoicePreview = ({ data }) => {
                     <p><strong>Date:</strong> {date}</p>
                 </div>
                 <div className="invoice-billed-to">
-                    <h3>Billed To:</h3>
-                    <p><strong>Customer Name:</strong> {customerName}</p>
-                    <p><strong>Address:</strong> {customerAddress}</p>
-                    <p><strong>Phone:</strong> {customerPhone}</p>
+                    <div className="billed-to-grid">
+                        <span className="billed-to-title">Billed To</span>
+                        {/* Spacer removed to allow title to span full width */}
+
+                        <span className="label">Customer Name:</span>
+                        <span className="value">{customerName}</span>
+
+                        <span className="label">Address:</span>
+                        <span className="value">{customerAddress}</span>
+
+                        <span className="label">Phone:</span>
+                        <span className="value">{customerPhone}</span>
+                    </div>
                 </div>
             </div>
 
